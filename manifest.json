@@ -1,6 +1,6 @@
 {
-    "name": "netease_cloud_music",
-    "short_name": "netease_cloud_music",
+    "name": "timuikit",
+    "short_name": "timuikit",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
