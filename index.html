@@ -29,10 +29,13 @@
 
     <!-- iOS meta tags & icons -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="Tencent Cloud Chat - 腾讯云IM - Flutter" />
+    <meta
+      name="apple-mobile-web-app-title"
+      content="Tencent Cloud Chat - 腾讯云IM - Flutter"
+    />
     <link rel="apple-touch-icon" href="./favicon.ico" />
-    <script src="./blob/main/node_modules/tim-upload-plugin/index.js"></script>
-    <script src="./blob/main/node_modules/tim-js-sdk/tim-js-friendship.js"></script>
+    <script src="./node_modules/tim-upload-plugin/index.js"></script>
+    <script src="./node_modules/tim-js-sdk/tim-js-friendship.js"></script>
     <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
     <script src="./trtc-wrapper.js"></script>
     <title>Tencent Cloud Chat - 腾讯云IM - Flutter</title>
@@ -62,17 +65,25 @@
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
     <script>
-    document.oncontextmenu = function (event) {
-            if (window.event) {
-                event =
-                    window.event;
-            } try {
-                var the = event.srcElement; if (!((the.tagName == "INPUT" && the.type.toLowerCase() ==
-                    "text") || the.tagName == "TEXTAREA")) { return false; } return true;
-            } catch (e) {
-                return false;
-            }
+      document.oncontextmenu = function (event) {
+        if (window.event) {
+          event = window.event;
         }
+        try {
+          var the = event.srcElement;
+          if (
+            !(
+              (the.tagName == "INPUT" && the.type.toLowerCase() == "text") ||
+              the.tagName == "TEXTAREA"
+            )
+          ) {
+            return false;
+          }
+          return true;
+        } catch (e) {
+          return false;
+        }
+      };
 
       var serviceWorkerVersion = "369977824";
       var scriptLoaded = false;
